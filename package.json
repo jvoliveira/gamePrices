@@ -1,0 +1,21 @@
+{
+  "name": "GamePrices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [],
+  "author": "João Vitor Oliveira",
+  "license": "",
+  "devDependencies": {
+    "electron": "^10.1.4",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "puppeteer": "^5.3.1"
+  }
+}

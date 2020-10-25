@@ -1,7 +1,6 @@
 const puppeteer = require("puppeteer");
-const { games } = require("./wantedGamesController");
 
-async function findAmazonPrice(searchTerm) {
+async function amazonFinder(searchTerm) {
   let baseLink = "https://www.amazon.com.br/s?k=";
   let params = "&rh=n%3A16253336011";
 
@@ -28,6 +27,8 @@ async function findAmazonPrice(searchTerm) {
   game.price = await page.evaluate((element) => element.innerText, priceInput);
   game.price = game.price.replace(/\n/g, "");
   game.title = await page.evaluate((element) => element.innerText, titleInput);
+  
+  console.table(game)
   await browser.close();
 
   return game;
